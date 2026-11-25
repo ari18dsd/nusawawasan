@@ -5,13 +5,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="NusaWawasan - artikel, wawasan, tips, dan inspirasi untuk kehidupan yang lebih baik.">
+<meta name="theme-color" content="#123c9a">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <title>NusaWawasan — Buka Wawasan, Temukan Inspirasi</title>
 <style>
 :root {
-  --navy:#101d38;
-  --navy2:#17294b;
-  --gold:#c9a45c;
-  --cream:#f8f7f3;
+  --navy:#123c9a;
+  --navy2:#0878e8;
+  --gold:#f47b00;
+  --cream:#f5f8fc;
   --ink:#20283a;
   --muted:#778094;
 }
@@ -19,19 +21,18 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
 a{text-decoration:none;color:inherit}
-header{background:var(--navy);color:white}
+header{background:#fff;color:var(--ink);border-bottom:1px solid #e8eef7}
 .topbar{max-width:1180px;margin:auto;padding:24px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-family:Georgia,serif;font-size:27px;font-weight:bold;letter-spacing:-1px}
-.logo span{color:var(--gold)}
-nav{display:flex;gap:24px;font-size:14px;color:#e2e6ef}
-nav a:hover{color:var(--gold)}
-.hero{max-width:1180px;margin:auto;padding:72px 22px 82px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.logo img{display:block;width:260px;max-width:65vw;height:auto}
+nav{display:flex;gap:24px;font-size:14px;color:#42516a;font-weight:700}
+nav a:hover{color:var(--navy2)}
+.hero{max-width:1180px;margin:auto;padding:58px 22px 66px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center;background:linear-gradient(110deg,#f4f9ff,#fff 60%)}
 .eyebrow{color:var(--gold);font-size:12px;font-weight:bold;letter-spacing:3px;text-transform:uppercase}
-.hero h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);line-height:1.08;margin:18px 0;color:white}
-.hero h1 em{color:var(--gold);font-style:normal}
-.hero p{color:#c5cede;line-height:1.8;font-size:16px;max-width:550px}
-.hero-art{min-height:270px;border:1px solid #ffffff25;border-radius:18px;background:linear-gradient(145deg,#263b60,#111d36);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;position:relative;overflow:hidden}
-.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #c9a45c55;border-radius:50%;width:220px;height:220px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);line-height:1.08;margin:18px 0;color:#172b4d}
+.hero h1 em{color:#f47b00;font-style:normal}
+.hero p{color:#59677e;line-height:1.8;font-size:16px;max-width:550px}
+.hero-art{min-height:270px;border:1px solid #d9e7f7;border-radius:18px;background:url("assets/banner.svg") center/cover no-repeat;box-shadow:0 18px 38px #173c7020}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #0878e855;border-radius:50%;width:220px;height:220px}
 .hero-art:after{width:290px;height:290px}
 .hero-art div{position:relative;z-index:1}
 .hero-art strong{display:block;font-family:Georgia,serif;font-size:35px;color:#fff}
@@ -41,36 +42,36 @@ main{max-width:1180px;margin:auto;padding:48px 22px 80px}
 .section-head h2{font-family:Georgia,serif;font-size:32px;margin:8px 0}
 .section-head p{color:var(--muted);margin:0;font-size:14px}
 .search{width:min(300px,100%);padding:13px 16px;border:1px solid #dce0e7;border-radius:9px;background:white;font-size:14px;outline:none}
-.search:focus{border-color:var(--gold)}
+.search:focus{border-color:var(--navy2)}
 .filters{display:flex;gap:9px;flex-wrap:wrap;margin:24px 0 30px}
 .filter{border:1px solid #dce0e7;background:white;padding:10px 16px;border-radius:30px;font-size:13px;cursor:pointer;color:#515c70}
-.filter.active,.filter:hover{background:var(--navy);color:white;border-color:var(--navy)}
+.filter.active,.filter:hover{background:var(--navy2);color:white;border-color:var(--navy2)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{background:white;border:1px solid #ececf0;border-radius:13px;overflow:hidden;transition:.2s;cursor:pointer}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #14213a12}
-.cover{height:185px;display:flex;align-items:center;justify-content:center;font-size:55px;background:linear-gradient(135deg,#1b3156,#344c72)}
-.cover.gold{background:linear-gradient(135deg,#7c6034,#c9a45c)}
-.cover.light{background:linear-gradient(135deg,#d9e0e9,#aab9cc)}
-.cover.brown{background:linear-gradient(135deg,#59463c,#a8876e)}
-.cover.blue{background:linear-gradient(135deg,#233b70,#6683b5)}
-.cover.purple{background:linear-gradient(135deg,#45365e,#8a77a9)}
+.cover{height:185px;display:flex;align-items:center;justify-content:center;font-size:55px;background:linear-gradient(135deg,#0878e8,#123c9a)}
+.cover.gold{background:linear-gradient(135deg,#ffb13b,#f47b00)}
+.cover.light{background:linear-gradient(135deg,#dceeff,#9dcfff)}
+.cover.brown{background:linear-gradient(135deg,#123c9a,#0878e8)}
+.cover.blue{background:linear-gradient(135deg,#0878e8,#123c9a)}
+.cover.purple{background:linear-gradient(135deg,#345c9d,#8db9e9)}
 .card-body{padding:20px}
-.tag{font-size:11px;color:#98743a;font-weight:bold;text-transform:uppercase;letter-spacing:1px}
+.tag{font-size:11px;color:#0878e8;font-weight:bold;text-transform:uppercase;letter-spacing:1px}
 .card h3{font-family:Georgia,serif;font-size:21px;line-height:1.35;margin:11px 0}
 .card p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}
 .meta{font-size:12px;color:#9299a7;margin-top:17px}
-.read{display:inline-block;margin-top:17px;font-size:13px;font-weight:bold;color:#98743a}
+.read{display:inline-block;margin-top:17px;font-size:13px;font-weight:bold;color:#f47b00}
 .empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--muted)}
-.about{margin-top:75px;background:var(--navy);color:white;border-radius:16px;padding:40px}
+.about{margin-top:75px;background-image:url("assets/watermark.svg"),linear-gradient(120deg,#123c9a,#0878e8);background-repeat:no-repeat;background-position:right 25px center;background-size:190px,cover;color:white;border-radius:16px;padding:40px}
 .about h2{font-family:Georgia,serif;font-size:30px;margin:0 0 12px}
 .about p{color:#c5cede;line-height:1.8;max-width:750px}
 footer{background:#0b1428;color:#b9c1d0;padding:30px 22px;text-align:center;font-size:13px}
-footer strong{color:var(--gold)}
+footer strong{color:#ff9a24}
 .article-view{display:none;background:white;border-radius:14px;padding:clamp(22px,5vw,55px);margin-top:25px}
 .article-view.open{display:block}
 .article-view h1{font-family:Georgia,serif;font-size:clamp(30px,4vw,44px);line-height:1.2}
 .article-view p{font-size:16px;line-height:1.9;color:#485267}
-.article-view .back{border:0;background:var(--navy);color:white;padding:12px 18px;border-radius:7px;cursor:pointer}
+.article-view .back{border:0;background:var(--navy2);color:white;padding:12px 18px;border-radius:7px;cursor:pointer}
 .article-view h2{font-family:Georgia,serif;margin-top:30px}
 @media(max-width:800px){
  .hero{grid-template-columns:1fr;padding-top:52px}
@@ -93,7 +94,7 @@ footer strong{color:var(--gold)}
 <body>
 <header>
   <div class="topbar">
-    <a class="logo" href="#">Nusa<span>Wawasan.</span></a>
+    <a class="logo" href="#" aria-label="NusaWawasan"><img src="assets/logo.svg" alt="NusaWawasan — Buka Wawasan, Temukan Inspirasi"></a>
     <nav>
       <a href="#">Beranda</a>
       <a href="#artikel">Artikel</a>
@@ -106,9 +107,7 @@ footer strong{color:var(--gold)}
       <h1>Buka Wawasan,<br><em>Temukan Inspirasi.</em></h1>
       <p>Temukan pengetahuan baru, tips praktis, dan inspirasi pilihan untuk membantu kamu berkembang di era digital.</p>
     </div>
-    <div class="hero-art">
-      <div><strong>Ideas.<br>Knowledge.<br>Inspiration.</strong><span>READ · LEARN · GROW</span></div>
-    </div>
+    <div class="hero-art" role="img" aria-label="Ilustrasi pengetahuan, buku, dan teknologi"></div>
   </section>
 </header>
 
